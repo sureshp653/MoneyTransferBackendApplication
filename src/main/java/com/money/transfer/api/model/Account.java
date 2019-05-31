@@ -10,6 +10,9 @@ import java.util.Objects;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+@Builder
+@AllArgsConstructor
+@Data
 public class Account {
     private transient final Lock lock;
     private final String number;
