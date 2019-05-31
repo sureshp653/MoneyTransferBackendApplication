@@ -15,7 +15,7 @@ Tech stack
 
 Tech stack used in this project is as follows:
 
-- **Application**: Java 11, [Gradle] 4.10.3 (https://gradle.org/), [Javalin](https://javalin.io), [Slf4J](https://www.slf4j.org/), [Dagger 2](https://github.com/google/dagger), [Joda Money](http://www.joda.org/joda-money/), [Gson](https://github.com/google/gson)
+- **Application**: Java 11, [Gradle] 4.10.3 (https://gradle.org/), [Javalin](https://javalin.io), [Slf4J](https://www.slf4j.org/), [Dagger 2](https://github.com/google/dagger), [Joda Money](http://www.joda.org/joda-money/), [Gson](https://github.com/google/gson), [Lombok](https://projectlombok.org/)
 - **Tests**: [JUnit](https://junit.org/), [Truth](https://github.com/google/truth), [Mockito](https://github.com/mockito/mockito), [Concurrent Unit](https://github.com/jhalterman/concurrentunit), [REST Assured](https://github.com/rest-assured/rest-assured)
 
 Building and running application
