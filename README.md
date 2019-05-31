@@ -1,4 +1,4 @@
-# money-transfer-back-end-services-api
+# money-transfers-back-end-services-api
 
 RESTful API (including data model and the backing implementation) for money transfers between accounts
 
