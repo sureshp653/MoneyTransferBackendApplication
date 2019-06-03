@@ -81,8 +81,7 @@ public class Transaction {
         return Objects.equals(id, that.id)
                 && Objects.equals(from, that.from)
                 && Objects.equals(to, that.to)
-                && Objects.equals(money, that.money)
-                && Objects.equals(createdAt, that.createdAt);
+                && Objects.equals(money, that.money);
     }
 
     @Override public int hashCode() {

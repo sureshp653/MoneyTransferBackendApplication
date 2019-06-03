@@ -73,7 +73,7 @@ public class InMemoryAccountRepository implements AccountRepository {
 
         accounts.remove(number);
         accounts.put(account.number(), updatedAccount);
-        return account;
+        return updatedAccount;
     }
 
     @Override public void withdrawMoney(final Account account, final Money money) {

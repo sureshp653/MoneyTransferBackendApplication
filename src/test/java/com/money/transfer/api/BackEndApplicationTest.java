@@ -1,10 +1,12 @@
 package com.money.transfer.api;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import static com.google.common.truth.Truth.assertThat;
 
 public class BackEndApplicationTest {
+
     @Test
     public void shouldCreateApplicationObject() {
         // when
@@ -21,7 +23,7 @@ public class BackEndApplicationTest {
 
         // when
         BackEndApplication.main(args);
-
-        // then no exception is thrown
+        // then
+        assertThat(BackEndApplication.stopService()).isTrue();
     }
 }

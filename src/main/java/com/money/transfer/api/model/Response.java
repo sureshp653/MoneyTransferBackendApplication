@@ -1,6 +1,10 @@
 package com.money.transfer.api.model;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+
 import java.util.Objects;
 
 public class Response {
@@ -72,4 +76,5 @@ public class Response {
             return new Response(this);
         }
     }
+
 }

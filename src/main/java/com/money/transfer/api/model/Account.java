@@ -1,8 +1,5 @@
 package com.money.transfer.api.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
 import org.joda.money.Money;
 
 import java.time.LocalDateTime;
@@ -76,9 +73,7 @@ public class Account {
         Account account = (Account) o;
         return Objects.equals(number, account.number)
                 && Objects.equals(user, account.user)
-                && Objects.equals(money, account.money)
-                && Objects.equals(createdAt, account.createdAt)
-                && Objects.equals(updatedAt, account.updatedAt);
+                && Objects.equals(money, account.money);
     }
 
     @Override public int hashCode() {
@@ -116,7 +111,7 @@ public class Account {
         }
 
         public Builder updatedAt(final LocalDateTime dateTime) {
-            this.createdAt = dateTime;
+            this.updatedAt = dateTime;
             return this;
         }
 

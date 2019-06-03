@@ -26,7 +26,7 @@ Please note: If you're on Windows, use `gradlew.bat` instead of `./gradlew` scri
 To build application, execute:
 
 ```
-./gradlew build
+./gradlew clean build
 ```
 
 To start application, execute:
@@ -186,12 +186,12 @@ Tests
 In order to execute **unit tests**, run the following command:
 
 ```
-./gradlew test
+./gradlew clean test
 ```
 
 In order to execute **integration tests** written with REST Assured, execute:
 
 ```
-./gradlew test -Dtest.profile=integration
+./gradlew clean test -Dtest.profile=integration
 ```
 

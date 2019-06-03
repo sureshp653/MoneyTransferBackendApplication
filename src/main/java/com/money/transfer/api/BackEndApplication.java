@@ -23,6 +23,7 @@ public class BackEndApplication {
     private static final Logger LOG = LoggerFactory.getLogger(BackEndApplication.class);
 
     private static final int PORT = 8080;
+    static Javalin backEndApp=null;
 
     public static void main(String[] args){
 
@@ -41,7 +42,7 @@ public class BackEndApplication {
         final AccountController accountController = backEndApplicationComponent.accountController();
         final TransactionController transactionController = backEndApplicationComponent.transactionController();
 
-        final Javalin backEndApp = Javalin.create()
+        backEndApp = Javalin.create()
                 .event(JavalinEvent.SERVER_STARTED, () -> LOG.info("server has started"))
                 .event(JavalinEvent.SERVER_START_FAILED, () -> LOG.error("server start has failed"))
                 .requestLogger((context, executionTimeMs) ->
@@ -87,5 +88,14 @@ public class BackEndApplication {
             LOG.error("error occurred", exception);
         });
 
+    }
+
+    public static boolean stopService(){
+        try {
+            backEndApp.stop();
+        } catch (Exception ex){
+            return false;
+        }
+        return true;
     }
 }

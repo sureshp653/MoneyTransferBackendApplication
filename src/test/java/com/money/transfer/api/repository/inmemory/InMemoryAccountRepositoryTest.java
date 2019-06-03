@@ -14,7 +14,9 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import java.time.LocalDateTime;
 import java.util.Map;
@@ -24,6 +26,7 @@ import java.util.UUID;
 import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.Mockito.when;
 
+@RunWith(MockitoJUnitRunner.class)
 public class InMemoryAccountRepositoryTest {
     private AccountRepository accountRepository;
 

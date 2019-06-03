@@ -2,9 +2,11 @@ package integration;
 
 import com.money.transfer.api.BackEndApplication;
 import io.restassured.RestAssured;
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import static com.google.common.truth.Truth.assertThat;
 import static io.restassured.RestAssured.delete;
 import static io.restassured.RestAssured.get;
 import static io.restassured.RestAssured.given;
@@ -20,7 +22,10 @@ public class RestApiIntegrationTest {
         configureBasePath();
         startServer();
     }
-
+    @AfterClass
+    public static void end(){
+        stopServer();
+    }
     private static void configureHost() {
         String baseHost = System.getProperty("server.host");
         if (baseHost == null) {
@@ -47,7 +52,11 @@ public class RestApiIntegrationTest {
     }
 
     private static void startServer() {
-        BackEndApplication.main(new String[] {});
+        BackEndApplication.main(new String[]{});
+    }
+
+    private static void stopServer() {
+        BackEndApplication.stopService();
     }
 
     @Test
