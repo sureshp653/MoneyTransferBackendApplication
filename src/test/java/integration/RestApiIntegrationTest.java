@@ -22,7 +22,7 @@ public class RestApiIntegrationTest {
         configureBasePath();
         startServer();
     }
-    
+
     @AfterClass
     public static void end(){
         stopServer();
