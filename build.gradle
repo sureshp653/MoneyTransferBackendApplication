@@ -37,6 +37,10 @@ sourceSets {
     }
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.10'
+}
+
 shadowJar {
     baseName = 'moneyTransfersBackendService'
     classifier = 'all'
