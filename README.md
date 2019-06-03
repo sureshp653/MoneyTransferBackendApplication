@@ -6,9 +6,9 @@ RESTful API (including data model and the backing implementation) for money tran
 Contents
 --------
 - [Tech stack](#tech-stack)
+- [Tests](#tests)
 - [Building and running application](#building-and-running-application)
 - [Endpoints](#endpoints)
-- [Tests](#tests)
 
 Tech stack
 ----------
@@ -34,6 +34,22 @@ To start application, execute:
 ```
 ./gradlew run
 ```
+
+Tests
+-----
+
+In order to execute **unit tests**, run the following command:
+
+```
+./gradlew clean test
+```
+
+In order to execute **integration tests** written with REST Assured, execute:
+
+```
+./gradlew clean test -Dtest.profile=integration
+```
+
 
 ### Fat jar
 
@@ -180,18 +196,4 @@ curl -X GET \
   http://localhost:8080/transaction
 ```
 
-Tests
------
-
-In order to execute **unit tests**, run the following command:
-
-```
-./gradlew clean test
-```
-
-In order to execute **integration tests** written with REST Assured, execute:
-
-```
-./gradlew clean test -Dtest.profile=integration
-```
 
